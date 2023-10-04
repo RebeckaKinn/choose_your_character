@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(58, 55, 55);
+}
+
+h1{
+    font-size: 100px;
+}
+
+div{
+    font-family: fantasy;
+    font-size: 30px; 
+    color: rgb(230, 223, 213);
+}
+

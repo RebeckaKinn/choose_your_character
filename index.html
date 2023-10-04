@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Character Creation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body>
+       <div id="app"></div>
+
+       <script>
+//model
+let character = `___`;
+let classchoice = `___`;
+let alignment = `___`; 
+
+updateView()
+
+//controller
+function choose1(choice){
+    character = choice;
+    updateView()
+}
+
+function choose2(choice){
+    classchoice = choice;
+    updateView()
+}
+
+function choose3(choice){
+    alignment = choice;
+    updateView()
+}
+
+//view
+updateView()
+function updateView(){
+    document.getElementById(`app`).innerHTML = /*HTML*/`
+    <h1>Choose your character!</h1>
+<br/>
+    <p class="toprow">I am a ${character}, with the ${classchoice} class. My alignment is ${alignment}, so watch out!</p>
+<br/>
+    <div class="choosebox" onclick="choose1('Dragonborn')">Dragonborn</div>
+    <div class="choosebox" onclick="choose1('Elf')">Elf</div>
+    <div class="choosebox" onclick="choose1('Halfling')">Halfling</div>
+<br/>
+    <div class="choosebox" onclick="choose2('Bard')">Bard</div>
+    <div class="choosebox" onclick="choose2('Fighter')">Fighter</div>
+    <div class="choosebox" onclick="choose2('Warlock')">Warlock</div>
+<br/>
+    <div class="choosebox" onclick="choose3('Neutral Good')">Neutral Good</div>
+    <div class="choosebox" onclick="choose3('Chaotic Good')">Chaotic Good</div>
+    <div class="choosebox" onclick="choose3('Lawful Evil')">Lawful Evil</div>
+    `
+}
+
+
+
+       </script>
+    </body>
+</html>
